@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        p{
+            font-family: sans-serif;
+            color: rgb(32, 31, 31);
+            margin: 0;
+        }
+
+        #cartao{
+            width: 500px;
+            height: 280px;
+            background-color: gray;
+            border-radius: 14px;
+            padding: 15px;
+        }
+
+        .nome{
+            font-size: 30px;
+        }
+
+        .chip{
+            width: 120px;
+        }
+
+        .valid-cartao{
+            font-size: 15px;
+        }
+
+        .numero-cartao{
+            font-size: 35px;
+        }
+
+        .texto-cartao{
+            font-size: 22px;
+        }
+
+        .logo{
+
+            position: absolute;
+            right: 10px;
+            bottom: 20px;
+
+            .circulo-vermelho{
+                width: 60px;
+                height: 60px;
+                border-radius: 100%;
+                background-color: red;
+                position: absolute;
+                left: -50px;
+            }
+
+            .circulo-amarelo{
+                width: 60px;
+                height: 60px;
+                border-radius: 100%;
+                background-color: yellow;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="cartao">
+
+        <p class="nome-cartao">bussiness</p>
+        <img class="chip" src="chip.png" alt="">
+
+        <div class="dados-cartao">
+            <p class="numero-cartao"> 5412 7412 6528 9032</p>
+            <p class="valid-cartao"> VALID THRU</p>
+            <p class="texto-cartao"> 12/23 </p>
+            <p class="texto-cartao"> Jefferson Chaves </p>
+        </div>
+
+        <div class="logo">
+            <div class="circulo-vermelho"></div>
+            <div class="circulo-amarelo"></div>
+        </div>
+    </div>
+</body>
+</html>

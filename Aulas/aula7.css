@@ -1,0 +1,106 @@
+/* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.caixa {
+    
+    height: 200px;
+    width: 50%;
+    float: left;
+    background-color: yellow;
+    position: relative;
+
+}
+
+.caixa2 {
+
+    height: 200px;
+    width: 50%;
+    float: right;
+    background-color: pink;
+    position: relative;
+
+}
+
+.caixa3 {
+
+    height: 100px;
+    width: 100px;
+    float: left;
+    background-color: green;
+    position: absolute;
+    left: 10px;
+    bottom: -20px;
+    z-index: -1;
+
+}
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cabecalho {
+    width: 100%;
+    height: 150px;
+    background-color: #f79b72;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+
+.conteudo {
+    min-height: calc(100vh - 150px - 200px);
+    background-color: gray;
+    margin-top: 150px;
+}
+
+.conteudo .menu {
+    position: relative;
+    float: left;
+    width: 25%;
+    min-height: calc(100vh - 200px - 150px);
+    background-color: #f79b72;
+    padding: 15px;
+}
+
+.conteudo .artigo {
+    position: relative;
+    float: left;
+    width: 75%;
+    padding: 15px;
+}
+.rodape {
+    height: 200px;
+    background-color: #2A4759;
+}
+
+.conteiner {
+    width: 1200px;
+    margin: 0 auto; 
+    border: solid 1px;
+    overflow: hidden;
+}
+
+.botao-topo {
+
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+    border-radius: 50%;
+    text-align: center;
+    
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    z-index: 1;
+
+}

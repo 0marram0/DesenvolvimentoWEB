@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .caixas{
+            border: solid 1px;
+            height: 50px;
+            background-color: yellow;
+        }
+
+        .caixa2{
+            width: 60px;
+        }
+
+        .carrinho{
+            left: 20px;
+            width: 30px;
+            position: absolute;
+        }
+
+        .bolinha{
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            background-color: blueviolet;
+            text-align: center;
+            color: #ffffff;
+            float: right;
+
+            position: relative;
+            right: 12px;
+            z-index: 1;
+        }
+        
+    </style>
+</head>
+
+<body>
+    
+    <div class="caixas caixa1">caixa 1</div>
+    <div class="caixas caixa2">caixa 2
+
+        <div class="bolinha">3</div>
+
+        <div><img class="carrinho" src="carrinho.png" alt=""></div>
+
+    </div>
+
+</body>
+</html>

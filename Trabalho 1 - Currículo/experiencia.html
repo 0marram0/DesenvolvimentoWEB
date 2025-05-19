@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Pixelify Sans", sans-serif;
+            letter-spacing: 0.01px;
+            line-height: 1.5;
+            font-weight: 2;
+        }
+
+        .conteiner {
+            height: 100vh;
+        }
+
+        header {
+            height: 18%;
+            width: 100%;
+            background-color: #4d6466;
+            position: fixed;
+            z-index: 1;
+        }
+
+        .titulo {
+            color: white;
+            text-align: center;
+            padding-top: 45px;
+            padding-left: 0px;
+            margin: 0 auto 0 auto;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .optimusJaime {
+            height: 150px;
+            width: 150px;
+        }
+
+        body{
+            background-color: #B3D8A8;
+        }
+
+        main {
+            width: 60%;
+            margin: 0 auto;
+            padding: 2% 0;
+            background-color: #FBFFE4;
+        }
+
+        section {
+            margin-top: 0px;
+            padding-bottom: 5px;
+            border-top: solid 1px gray;
+        }
+
+        .inicio {
+            padding-top: 15%;
+        }
+
+        h2{
+            text-align: center;
+            color: rgb(140, 76, 8);
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+        }
+
+        th, td {
+            border: 1px solid #444;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            color: white;
+            background-color: #4d6466;
+        }
+
+        p {
+            padding-left: 5px;
+            color: #444;
+        }
+
+        .exp{
+            border: solid 5px #4d6466;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            height: 300px;
+            width: 300px;
+        }
+
+        .desc {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        .wiki{
+            text-align: center;
+        }
+
+        .hiperlink{
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="conteiner">
+        
+        <header>
+
+            <div class="logo">
+                <img class="optimusJaime" src="OptimusJaime.png" alt="">
+            </div>
+
+            <h1 class="titulo">Optimus Jaime</h1>
+
+        </header>
+
+        <main>
+            
+            <section class="inicio">
+
+                <h2>Experiências de Jaime</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Missão</th>
+                            <th>Local</th>
+                            <th>Função</th>
+                            <th>Duração</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dança das Estrelas</td>
+                            <td>Espaço Interestelar</td>
+                            <td>Dançarino e DJ</td>
+                            <td>3 meses</td>
+                        </tr>
+                        <tr>
+                            <td>Operação Sanduíche Feliz</td>
+                            <td>Docelândia</td>
+                            <td>Chefe de cozinha</td>
+                            <td>1 mês</td>
+                        </tr>
+                        <tr>
+                            <td>Campeonato Lógico Interdimensional</td>
+                            <td>Dimensão X</td>
+                            <td>Consultor Estratégico</td>
+                            <td>2 semanas</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <br>
+                <h2>Fotos de Jaime durante suas experiências</h2>
+                <br>
+                <img class="exp" src="JaimeDJEspacial.png" alt="">
+                <p class="desc">Jaime em momento especial na dança nas estrelas</p>
+                <img class="exp" src="JaimeCozinheiro.png" alt="">
+                <p class="desc">Jaime produzindo sanduíches</p>
+                <br>
+                <a href="https://horadeaventura.fandom.com/pt-br/wiki/BMO" target="_blank"> <p class="wiki">Ver detalhes da vida e das missões de Jaime</p></a>
+            </section>
+
+            <section>
+                <br>
+                <h2>Aventuras Inimagináveis</h2>
+                    <p>Durante as missões no <abbr title="Reino de Ooo">Ooo</abbr>, Optimus Jaime auxiliou em batalhas, jantares perigosos e festas com sua interface de alta performance, sempre prezando pela alegria e bem-estar da equipe.</p>
+                    <br>
+                <a href="index.html"><p class="wiki">Voltar ao Currículo</p> </a>
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

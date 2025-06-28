@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Exemplo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    <form action="/submit" method="POST" onsubmit="return processar_formulario()">
+
+        <h3>Cadastre-se</h3>
+        <br>    
+        
+        <div class="formgroup">
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Nome completo...">
+
+        </div>
+
+
+        <div class="formgroup">
+
+            <label for="genero">Gênero:</label>
+
+            <select required id="genero" name="genero">
+                <option value="" class="invalid" disabled selected>Selecione...</option>
+                <option value="ma">Masculino</option>
+                <option value="fe">Feminino</option>
+            </select>
+
+        </div>
+
+
+        <div class="formgroup">
+
+            <label for="estadoCivil">Estado Civil:</label>
+
+            <select required id="estadoCivil" name="estadoCivil">
+                <option value="" class="invalid" disabled selected>Selecione...</option>
+                <option value="sl">Solteiro/a</option>
+                <option value="cs">Casado/a</option>
+            </select>
+
+        </div>
+
+
+        <div class="formgroup">
+
+            <label for="data_nascimento">Data de Nascimento:</label>
+            <input id="data_nascimento" name="data" type="date">
+
+        </div>
+
+
+        <div class="formgroup">
+
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" name="telefone" placeholder="+99 (99) 99999-9999">
+
+        </div>
+
+
+        <div class="formgroup">
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="E-mail...">
+
+        </div>
+
+
+        <div class="formgroup">
+
+            <label>Habilidades:</label>
+
+            <label for="html">
+                <input type="checkbox" id="html" name="habilidades" value="HTML">HTML
+            </label>
+
+            <label for="css">
+                <input type="checkbox" id="css" name="habilidades" value="CSS">CSS
+            </label>
+
+            <label for="js">
+                <input type="checkbox" id="js" name="habilidades" value="JS">JavaScript
+            </label>
+
+        </div>
+
+
+        <div class="formgroup">
+
+            <label for="pais">País:</label>
+
+            <select required id="pais" name="pais">
+                <option value="" class="invalid" disabled selected>Selecione...</option>
+                <option value="SA">Arábia Saudita</option>
+                <option value="AE">Argélia</option>
+                <option value="QA">Qatar</option>
+                <option value="EG">Egito</option>
+                <option value="EAU">Emirados Árabes Unidos</option>
+                <option value="IE">Iêmen</option>
+                <option value="IR">Iraque</option>
+                <option value="LI">Líbano</option>
+                <option value="MA">Marrocos</option>
+                <option value="OM">Omã</option>
+                <option value="PL">Palestina</option>
+            </select>
+
+        </div>
+
+
+        <div class="formgroup">
+
+            <label for="comentarios">Comentários:</label><br>
+            <textarea id="comentarios" name="comentarios"></textarea>
+
+        </div>
+
+
+        <div class="formgroup">
+
+            <button type="submit">Enviar</button>
+
+        </div>
+
+
+    </form>
+
+    <script src="processa_formulario.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"></script>
+    <script> new FroalaEditor('textarea');</script>
+
+</body>
+
+</html>

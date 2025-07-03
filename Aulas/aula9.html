@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            font-family: Ubuntu;
+            background-color: rgb(61, 58, 58);
+        }
+
+        .container {
+            background-color: rgb(99, 96, 96);
+            border-radius: 35px;
+            padding: 10px;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            height: 500px;
+        }
+
+        h1 {
+            color: white;
+
+        }
+
+        .container .item {
+            flex: auto;
+            margin: 10px;
+            padding: 80px;
+            color: #fff;
+            font-size: 40px;
+
+            /* height: 150px; */
+            /* alturas fixas em conteudos flexiveis podem gerar comportamento inesperado */
+
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            border-radius: 15px;
+        }
+
+        .item-a {
+            background-color: red;
+            align-self: flex-start;
+        }
+
+        .item-b {
+            background-color: green;
+            align-self: stretch;
+        }
+
+        .item-c {
+            background-color: blue;
+            align-self: center;
+        }
+
+        .item-d {
+            background-color: yellow;
+            align-self: flex-end;
+        }
+
+        .item-e {
+            background-color: purple;
+            align-self: flex-start;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1> Flexible Box </h1>
+    <hr>
+
+    <div class="container">
+
+        <div class="item item-a">a</div>
+        <div class="item item-b">b</div>
+        <div class="item item-c">c</div>
+        <div class="item item-d">d</div>
+        <div class="item item-e">e</div>
+
+    </div>
+
+</body>
+</html>

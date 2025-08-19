@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+            
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        @media screen and (min-width: 1024px){
+            body {
+                background: blue;
+            }
+        }
+
+        @media screen and (min-width: 767px) and (max-width: 1024px) {
+            body {
+                background: rgb(255, 0, 0);
+            }
+        }
+
+        @media screen and (max-width: 767px){
+            body {
+                background: rgb(255, 230, 0);
+            }
+
+            .col-cel-1 {flex: 1 1 calc(100% / 12);}
+            .col-cel-2 {flex: 1 1 calc(100% / 6);}
+            .col-cel-3 {flex: 1 1 calc(100% / 4);}
+            .col-cel-4 {flex: 1 1 calc(100% / 3);}
+            .col-cel-5 {flex: 1 1 calc(100% / 12*5);}
+            .col-cel-6 {flex: 1 1 calc(100% / 2);}
+            .col-cel-7 {flex: 1 1 calc(100% / 12*7);}
+            .col-cel-8 {flex: 1 1 calc(100% / 12*8);}
+            .col-cel-9 {flex: 1 1 calc(100% / 12*9);}
+            .col-cel-10 {flex: 1 1 calc(100% / 12*10);}
+            .col-cel-11 {flex: 1 1 calc(100% / 12*11);}
+            .col-cel-12 {flex: 1 1 calc(100%);}
+
+        }
+
+        [class^= "col-"] {
+            border: solid 1px #ddd;
+            padding: 10px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="row">
+        
+        <div class="col-cel-12">
+            coluna 1
+        </div>
+
+        <div class="col-cel-12">
+            coluna 2
+        </div>
+
+
+    </div>
+</body>
+</html>

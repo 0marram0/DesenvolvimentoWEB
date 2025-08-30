@@ -103,7 +103,7 @@ h1, h2, h3 {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
     body {
         background-color: var(--carrot-color);
     }
@@ -116,13 +116,12 @@ h1, h2, h3 {
         width: 100%;
     }
 
-    .menu-responsivo {
-        display: flex;
-    }
-
     .menu {
         display: none;
     }
 
+    .menu-responsivo {
+        display: flex;
+    }
 }
 

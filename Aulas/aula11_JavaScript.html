@@ -17,11 +17,7 @@
 
     <p class="paragrafo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, deserunt? Ratione excepturi dicta voluptatum ad, quos omnis rem minus dignissimos ipsa harum veritatis. Nobis libero distinctio ipsum facilis repellat consequatur.</p>
     
-    <img src="https://a.espncdn.com/combiner/i?img=/i/headshots/mma/players/full/2335447.png&w=350&h=254" alt="" width="500px"
-    
-        onmouseenter="mouseEnter()"
-        ondrag="mouseDrag()"
-        onmouseleave="mouseLeave()">
+    <img src="https://a.espncdn.com/combiner/i?img=/i/headshots/mma/players/full/2335447.png&w=350&h=254" alt="" width="500px">
 
     <p id="resposta-anderson"></p>
 
@@ -80,6 +76,12 @@
         }
 
         let respostaAnderson = document.querySelector('#resposta-anderson');
+
+        let Anderson = document.querySelector('img');
+
+        Anderson.onmouseenter = mouseEnter;
+        Anderson.ondrag = mouseDrag;
+        Anderson.onmouseleave = mouseLeave;
 
         function mouseEnter(){ 
             respostaAnderson.innerText = 'Lhe matarei';

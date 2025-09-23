@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Hello World!</h1>
+
+    <button onclick="alert('Clicastes Patrão')">Clique aqui.</button>
+
+    <button onclick='novaFuncionalidade()'>Não clique aqui.</button>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum eveniet laudantium, illum laborum saepe quae molestias optio, qui beatae, possimus corrupti sapiente quaerat odit vero esse itaque velit tempora nobis?</p>
+
+    <p class="paragrafo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, deserunt? Ratione excepturi dicta voluptatum ad, quos omnis rem minus dignissimos ipsa harum veritatis. Nobis libero distinctio ipsum facilis repellat consequatur.</p>
+    
+    <img src="https://a.espncdn.com/combiner/i?img=/i/headshots/mma/players/full/2335447.png&w=350&h=254" alt="" width="500px">
+
+    <p id="resposta-anderson"></p>
+
+    <div id="caixa">
+
+    </div>
+
+    <script>
+
+        //Mensagem no topo da página
+        alert("One day you'll leave this world behind... So live a life, you'll remember.."); 
+
+        //Mensagem no console do inspecionar
+        console.log("My father told me when i was just a child.");
+
+        //3 formas de criar variáveis: var, let e const
+        let brinquedo = "boneca";
+        
+        //A representação interna de uma página é chamada de DOM (Document Object Model)
+        //O DOM é criado automaticamente pelo navegador quando acessamos a página 
+        //A estrutura do DOM é chamada de Documento, e cada item dentro dele é chamado de elemento
+
+
+
+        //O acesso aos elementos do DOM é realizado por meio de seletores
+
+        //Selecionando elementos: "getElementsByTagName" - pega uma lista de elementos
+        let elementos = document. getElementsByTagName('p');
+
+        //Modificar o elemento pelo JS - Inner Text é o texto interno da tag - elementos[1] pega o primeiro elemento da lista obtida acima
+        elementos[1].innerText = "Novo Texto!"
+
+        //Mostrola no console o texto do elemento
+        console.log(elementos[1].innerText);
+
+        //Selecionando elementos: querySelector - retorna o primeiro elemento dentro grupo especificado
+
+        //Selecionando elementos querySelectorAll - retorna a lista de elementos dentro do grupo especificado
+    
+
+
+        //Respondendo eventos
+
+        //Eventos: clique, envio de formulário, scroll, tecla pressionada, quando a tela é tocada, quando site carrega, etc
+        
+
+
+        //Funcão
+
+        function novaFuncionalidade(){
+
+            let titulo = document.querySelector('h1');
+            titulo.innerText = 'Seu titulo foi hackeado';
+            titulo.style.color = 'red';
+            titulo.style.fontSize = '100px';
+        }
+
+        let respostaAnderson = document.querySelector('#resposta-anderson');
+
+        let Anderson = document.querySelector('img');
+
+        Anderson.onmouseenter = mouseEnter;
+        Anderson.ondrag = mouseDrag;
+        Anderson.onmouseleave = mouseLeave;
+
+        function mouseEnter(){ 
+            respostaAnderson.innerText = 'Lhe matarei';
+        }
+        
+        function mouseDrag(){
+            respostaAnderson.innerText = 'Solte Anderson';    
+        }
+
+        function mouseLeave(){ 
+            respostaAnderson.innerText = 'Fique longe pateta';
+        }
+
+    </script>
+
+</body>
+</html>

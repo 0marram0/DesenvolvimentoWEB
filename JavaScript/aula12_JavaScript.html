@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="campo_sabor" value="jefferson">
+    <input type="button" id="click" value="click here">
+    <div class="mostrador">
+
+    </div>
+
+    <script>
+        let campo_sabor = document.querySelector("#campo_sabor")
+        let most = document.querySelector(".mostrador")
+        let clique = document.querySelector("click")
+        let soma = 0
+
+        document.addEventListener("keydown", (e)=> {
+            most.innerText = "apertou na tecla: " + e.key
+        })
+
+        document.addEventListener("click", ()=> {
+            let bgColor = "rgb(" + Math.random() * 255 + "," + Math.random() * 255 + "," + Math.random() * 255 + ")"
+            document.body.style.backgroundColor = bgColor
+        })
+
+        campo_sabor.addEventListener("input", () => {
+            if(campo_sabor.value.toLowerCase() == "chocolate") {
+                most.innerText = "Eu adoro chocolate"
+            } else {
+                most.innerText = "Outro sabor informado: " + campo_sabor.value
+            }
+        })
+
+        clique.addEventListener("click", ()=> {
+            if(clique.addEventListener("click")) {
+                soma++
+            }
+
+            most.innerText = soma
+        })
+
+    </script>
+</body>
+</html>

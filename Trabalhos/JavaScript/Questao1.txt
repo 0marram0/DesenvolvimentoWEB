@@ -1,0 +1,1 @@
+O principal objetivo do JavaScript no front-end é adicionar interatividade e dinamismo a uma página web, possibilitando a manipulação de conteúdo HTML e CSS.

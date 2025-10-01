@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button style="display: flex; margin: 0 auto;" class="gerador">Gere seu nome de aventura!</button>
+    <h1 style="display: flex; justify-content: center;" class="nome"></h1>
+    <script>
+
+        let botaoGerador = document.querySelector(".gerador")
+        let nomeGerado = document.querySelector(".nome")
+
+        let nomes = ["Haaland", "Messi", "Pietro", "Victor", "Eduardo", "Antonello"]
+        let sobrenomes = ["Winscosin", "El Wanni", "Tottini", "Yakira", "Newton", "Schleiden"]
+        let classes = ["Bardo", "Bárbaro", "Monge", "Clérigo", "Druida", "Futebolista"]
+        let locais = ["Stamford Bridge", "Pindamonhangaba", "Hanôver", "Toronto", "Newark", "Casa do Omar"]
+
+        botaoGerador.addEventListener('click', ()=>{
+            let nome = nomes[Math.floor(Math.random() * 6)]
+            let sobrenome = sobrenomes[Math.floor(Math.random() * 6)]
+            let classe = classes[Math.floor(Math.random() * 6)]
+            let local = locais[Math.floor(Math.random() * 6)]
+
+            nomeGerado.innerText = (nome) + " " + (sobrenome) + ", " + " o " + (classe) + " de " + (local)
+        })
+
+    </script>
+
+</body>
+</html>

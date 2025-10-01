@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 style="display: flex; justify-content: center;"> Lista de Compras do Haaland </h1>
+    <button style="display: flex; justify-content: center; margin: 0 auto;" class="adicionar"> Adicionar Item </button>
+    <ul style="display: flex; align-items: center; flex-direction: column;" class="lista"></ul>
+
+    <script>
+
+        let botaoAdicionar = document.querySelector(".adicionar")
+        let lista = document.querySelector(".lista")
+        let posicao = 0
+
+        botaoAdicionar.addEventListener('click', ()=>{
+            posicao++
+            let item = document.createElement("li")
+            item.innerText = (posicao) + "- Haalandinho comprará isso."
+            lista.appendChild(item)
+        })
+
+    </script>
+
+</body>
+</html>

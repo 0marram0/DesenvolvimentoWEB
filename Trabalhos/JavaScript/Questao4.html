@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button class="clicar"> Clique </button>
+    <button class="zerar"> Zerar </button>
+    <p class="contador"></p>
+
+    <script>
+
+        let botaoClicar = document.querySelector(".clicar") 
+        let botaoZerar = document.querySelector(".zerar")
+        let contador = document.querySelector(".contador")
+        let num = 0
+
+        botaoClicar.addEventListener('click', ()=>{
+            num++
+            contador.innerText = num
+        })
+
+        botaoZerar.addEventListener('click', ()=>{
+            num = 0
+            contador.innerText = num
+        })
+
+    </script>
+
+</body>
+</html>

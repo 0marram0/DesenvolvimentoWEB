@@ -12,8 +12,8 @@
     
     <script>
 
-        let respostaWaddles = document.querySelector(".resposta");
-        let waddles = document.querySelector(".waddles");
+        let respostaWaddles = document.querySelector(".resposta")
+        let waddles = document.querySelector(".waddles")
 
         waddles.onmouseenter = mouseEnter;
         waddles.ondrag = mouseDrag;
@@ -24,15 +24,15 @@
         })
 
         function mouseEnter(){ 
-            respostaWaddles.innerText = "Sai de cima de mim, grrr!";
+            respostaWaddles.innerText = "Sai de cima de mim, grrr!"
         }
         
         function mouseDrag(){
-            respostaWaddles.innerText = "Solta!! Grrrr";    
+            respostaWaddles.innerText = "Solta!! Grrrr"
         }
 
         function mouseLeave(){ 
-            respostaWaddles.innerText = "Fique longe pateta!";
+            respostaWaddles.innerText = "Fique longe pateta!"
         }
 
     </script>

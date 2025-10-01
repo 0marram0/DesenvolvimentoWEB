@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <img class="waddles" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXO5EO-JyHndjSCASsefnx8AMHujsT6Jo_qQ&s" alt="">
+    <p class="resposta"></p>
+    
+    <script>
+
+        let respostaWaddles = document.querySelector(".resposta");
+        let waddles = document.querySelector(".waddles");
+
+        waddles.onmouseenter = mouseEnter;
+        waddles.ondrag = mouseDrag;
+        waddles.onmouseleave = mouseLeave;
+        
+        waddles.addEventListener('click', ()=>{
+            respostaWaddles.innerText = "Você me BATEU!!!!!!!!"
+        })
+
+        function mouseEnter(){ 
+            respostaWaddles.innerText = "Sai de cima de mim, grrr!";
+        }
+        
+        function mouseDrag(){
+            respostaWaddles.innerText = "Solta!! Grrrr";    
+        }
+
+        function mouseLeave(){ 
+            respostaWaddles.innerText = "Fique longe pateta!";
+        }
+
+    </script>
+
+</body>
+</html>

@@ -18,13 +18,16 @@
 <body>
     
     <input class="sabor" type="text">
+    <button class="alternarTema">Alternar Tema</button>
     <p class="resposta"></p>
 
     <script>
 
+        let body = document.querySelector("body")
         let botaoTema = document.querySelector(".alternarTema")
         let saborSorvete = document.querySelector(".sabor")
         let verificador = document.querySelector(".resposta")
+        let tema = localStorage.getItem("tema")
 
 
         saborSorvete.addEventListener('input', () => {
@@ -36,6 +39,23 @@
                 } else {
                     verificador.innerText = "Ahh, eu esperava um sabor de sorvete..."
                 }
+            }
+        })
+
+        if(tema == 'tema-escuro'){
+            body.classList.add('tema-escuro')
+        }
+
+        botaoTema.addEventListener('click', ()=>{ 
+            body.classList.toggle('tema-escuro')
+        
+            let isTemaEscuro = body.classList.contains("tema-escuro")
+        
+
+            if(isTemaEscuro){
+                localStorage.setItem("tema", "tema-escuro")
+            } else {
+                localStorage.setItem("tema", "")
             }
         })
 

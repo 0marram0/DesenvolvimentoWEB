@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input class="sabor" type="text">
+    <p class="resposta"></p>
+
+    <script>
+
+        let saborSorvete = document.querySelector(".sabor")
+        let verificador = document.querySelector(".resposta")
+
+        saborSorvete.addEventListener('input', () => {
+            if(saborSorvete.value.length > 3){
+                if (saborSorvete.value.toLowerCase() == "chocolate"){
+                    verificador.innerText = "Eu amo sorvete de chocolate!"
+                } else if (saborSorvete.value.toLowerCase() == "flocos"){
+                    verificador.innerText = "Ahh, mas chocolate é o meu favorito..."
+                } else {
+                    verificador.innerText = "Ahh, eu esperava um sabor de sorvete..."
+                }
+            }
+        })
+
+    </script>
+
+</body>
+</html>

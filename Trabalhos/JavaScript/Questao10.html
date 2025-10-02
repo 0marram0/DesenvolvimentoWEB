@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <img class="fotografia" src="" alt="">
+
+    <script>
+
+        let foto = document.querySelector('.fotografia')
+        let imagens = [
+        "https://picsum.photos/id/237/600/400",
+        "https://picsum.photos/id/238/600/400",
+        "https://picsum.photos/id/239/600/400",
+        "https://picsum.photos/id/240/600/400"
+        ]
+
+        function trocarImagem(){
+            
+            let imagem = imagens[Math.floor(Math.random() * 4)]
+
+            foto.src = imagem
+
+            setTimeout(trocarImagem, 5000)
+        }
+
+        trocarImagem()
+
+    </script>
+
+</body>
+</html>

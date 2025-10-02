@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <label for="nome">Nome completo:</label>
+    <input type="text" id="nome" name="nome" placeholder="Nome..." required>
+    <br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="seuemail@gmail.com" required>
+    <br><br>
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" placeholder="Senha..." required>
+    <br><br>
+    <label for="confirmarSenha">Confirmar Senha:</label>
+    <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Senha..." required>
+    <br><br>
+    <button style="margin-left: 50px;" class="botao">Enviar</button>
+    <input type="checkbox" id="mostrarSenha"> Mostrar senha
+    <p class="verificador"></p>
+
+    <script>
+
+        let nome = document.querySelector("#nome")
+        let email = document.querySelector("#email")
+        let senha = document.querySelector("#senha")
+        let confirmarSenha = document.querySelector("#confirmarSenha")
+        let botao = document.querySelector(".botao")
+        let verificador = document.querySelector(".verificador")
+        let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+        let senhaRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/
+        let mostrarSenha = document.querySelector("#mostrarSenha");
+
+        botao.addEventListener('click', () => {
+            if (nome.value.length < 3) {
+                verificador.innerText = "Coloque o nome completo."
+            } else if (emailRegex.test(email.value) == false) {
+                verificador.innerText = "Coloque um e-mail válido."
+            } else if (senha.value.length < 8) { 
+                verificador.innerText = "A senha deve conter no mínimo 8 caracteres."
+            } else if (senhaRegex.test(senha.value) == false) {
+                verificador.innerText = "A senha deve conter pelo menos 1 maiúscula, 1 número e 1 especial."
+            } else if (senha.value != confirmarSenha.value) {
+                verificador.innerText = "As senhas informadas devem ser iguais."
+            } else {
+                verificador.innerText = "Cadastro realizado!"
+            }
+        })
+
+        mostrarSenha.addEventListener("click", () => {
+            if (mostrarSenha.checked) {
+                senha.type = "text";
+                confirmarSenha.type = "text";
+            } else {
+                senha.type = "password";
+                confirmarSenha.type = "password";
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>
